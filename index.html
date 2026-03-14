@@ -3,49 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      background: #f7f7f7;
-      color: #222;
-      text-align: center;
-    }
-    .card {
-      max-width: 700px;
-      margin: 0 auto;
-      background: white;
-      padding: 32px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #222;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-    }
-  </style>
+  <title>Climb Assist</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Hello, GitHub Pages!</h1>
-    <p>This is my first website.</p>
-    <p>I am building an accessible climbing project.</p>
-    <a class="btn" href="#">Learn More</a>
+  <div class="app" id="app">
+    <header class="top-bar">
+      <p class="eyebrow">CPT208 · Member 3</p>
+      <h1>Climb Assist</h1>
+      <p class="subtitle">
+        A mobile-first accessible climbing guide for beginners and visually impaired users.
+      </p>
+    </header>
+
+    <main class="content">
+      <section class="card intro-card">
+        <h2>What this prototype focuses on</h2>
+        <p>
+          This prototype highlights beginner tutorial guidance, accessible interaction,
+          readable mobile design, and speech-based feedback.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Quick Access</h2>
+        <div class="button-group">
+          <button class="primary-btn" id="tutorialBtn" aria-label="Open beginner tutorials">
+            Beginner Tutorials
+          </button>
+          <button class="secondary-btn" id="accessibilityBtn" aria-label="Open accessibility settings">
+            Accessibility Settings
+          </button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Accessibility Tools</h2>
+        <div class="button-group">
+          <button class="primary-btn" id="readPageBtn" aria-label="Read this page aloud">
+            Read This Page
+          </button>
+          <button class="secondary-btn" id="repeatBtn" aria-label="Repeat last message">
+            Repeat Last Message
+          </button>
+          <button class="secondary-btn" id="contrastBtn" aria-label="Toggle high contrast mode">
+            Toggle High Contrast
+          </button>
+          <button class="ghost-btn" id="stopBtn" aria-label="Stop speech">
+            Stop Speech
+          </button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Member 3 Scope</h2>
+        <ul>
+          <li>Beginner tutorial structure</li>
+          <li>Accessible mobile interface</li>
+          <li>Speech feedback and page reading</li>
+          <li>VoiceOver-style focus hints</li>
+          <li>High contrast and large touch targets</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Next Pages to Build</h2>
+        <ul>
+          <li>Step-by-step user information page</li>
+          <li>Tutorial hub page</li>
+          <li>Tutorial detail page</li>
+          <li>Accessibility settings page</li>
+          <li>Voice command demo page</li>
+        </ul>
+      </section>
+    </main>
+
+    <div class="voice-hint" aria-live="polite" id="voiceHint">
+      You are on the home page.
+    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
